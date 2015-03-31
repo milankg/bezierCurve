@@ -2,21 +2,17 @@
 (function() {
   this.BezierCurve = (function() {
     function BezierCurve(points, canvas, totalPointsX, totalPointsY) {
-      var bezierWidth, deepLevel, initialPoints, inputPoint, point, realX, realY, titleWidth, _i, _len;
+      var bezierWidth, deepLevel, initialPoints, inputPoint, point, realX, realY, _i, _len;
       this.canvasBackgroundColor = '#FFF';
       this.pointColor = '#333';
       this.animationTime = 10000;
       this.ctx = canvas[0].getContext('2d');
       this.canvasWidth = canvas.width();
       this.canvasHeight = canvas.height();
-      this.title = "~~~ VIGOR MEDIA & DESIGN ~~~";
-      titleWidth = this.ctx.measureText(this.title).width;
-      this.titleLeft = (this.canvasWidth - titleWidth) / 2;
-      this.titleTop = 10;
       this.titleBezierCurve = "~ Bezier Curve ~";
       bezierWidth = this.ctx.measureText(this.titleBezierCurve).width;
       this.titleBezierCurveLeft = (this.canvasWidth - bezierWidth) / 2;
-      this.titleBezierCurveTop = this.titleTop + 10 + 3;
+      this.titleBezierCurveTop = 10;
       initialPoints = [];
       deepLevel = 0;
       for (_i = 0, _len = points.length; _i < _len; _i++) {
@@ -90,8 +86,6 @@
           this.ctx.closePath();
           this.ctx.fill();
         }
-        this.ctx.fillStyle = 'black';
-        this.ctx.fillText(this.title, this.titleLeft, this.titleTop);
         this.ctx.fillStyle = 'black';
         this.ctx.fillText(this.titleBezierCurve, this.titleBezierCurveLeft, this.titleBezierCurveTop);
       }

@@ -20,15 +20,10 @@ class @BezierCurve
 		# -----------------------------------------
 		# Title
 		# -----------------------------------------
-		@title = "~~~ VIGOR MEDIA & DESIGN ~~~"
-		titleWidth = @ctx.measureText( @title ).width
-		@titleLeft = ( @canvasWidth - titleWidth ) / 2
-		@titleTop = 10
-
 		@titleBezierCurve = "~ Bezier Curve ~"
 		bezierWidth = @ctx.measureText( @titleBezierCurve ).width
 		@titleBezierCurveLeft = ( @canvasWidth - bezierWidth ) / 2
-		@titleBezierCurveTop = @titleTop + 10 + 3
+		@titleBezierCurveTop = 10
 
 		# -----------------------------------------
 		# Convert points in real coordinate
@@ -47,15 +42,14 @@ class @BezierCurve
 			# add into list 
 			initialPoints.push( point )
 
-
 		# -----------------------------------------
-		# Create lines
+		# Create all points recursively
 		# -----------------------------------------
 		@allPoints = initialPoints.concat( @_generatePoints( initialPoints, deepLevel + 1 ) )
 		@allPoints[ @allPoints.length - 1 ].main = true
 
 		# -----------------------------------------
-		# BezierCurve path
+		# BezierCurve path ( list of points )
 		# -----------------------------------------
 		@bezierCurvePath = []
 
@@ -139,11 +133,7 @@ class @BezierCurve
 				@ctx.closePath();
 				@ctx.fill();				
 
-			# # Draw Vigor Media and Design
-			@ctx.fillStyle = 'black';
-			@ctx.fillText( @title, @titleLeft, @titleTop );
-
-			# Draw Bezier Curve
+			# Draw Bezier Curve points
 			@ctx.fillStyle = 'black';
 			@ctx.fillText( @titleBezierCurve, @titleBezierCurveLeft, @titleBezierCurveTop );
 
