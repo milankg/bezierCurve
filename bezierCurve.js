@@ -119,8 +119,6 @@
       return this.fromPoint2 = point2;
     };
 
-    BezierCurvePoint.prototype.calculateMoving = function() {};
-
     BezierCurvePoint.prototype.drawLines = function(delta) {
       var lineColor, lineWidth;
       if (this.movable) {

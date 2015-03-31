@@ -172,10 +172,6 @@ class @BezierCurvePoint
 		@fromPoint1 = point1
 		@fromPoint2 = point2
 
-	calculateMoving: () ->
-
-
-
 	drawLines: ( delta ) ->
 
 		# Draw line on which this point is moving on
