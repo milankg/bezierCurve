@@ -1,6 +1,6 @@
 # Bezier Curve
 
-Simple implementation in Javascript
+Simple Bezier's curve implementation in javascript
 
 # Team
 
