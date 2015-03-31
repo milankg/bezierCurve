@@ -1,6 +1,6 @@
 # Bezier Curve
 
-Simple Bezier's curve implementation in javascript
+Bezier's curve implementation in javascript
 
 <img src='https://s3.amazonaws.com/beziercurve/BezierCurve.png'/>
 
