@@ -120,9 +120,8 @@
     };
 
     BezierCurvePoint.prototype.drawLines = function(delta) {
-      var lineColor, lineWidth;
+      var lineColor;
       if (this.movable) {
-        lineWidth = 1;
         if (this.deepLevel === 1) {
           lineColor = '#666';
         } else {
@@ -133,7 +132,7 @@
           }
         }
         this.ctx.beginPath();
-        this.ctx.lineWidth = lineWidth;
+        this.ctx.lineWidth = 1;
         this.ctx.strokeStyle = lineColor;
         this.ctx.moveTo(this.fromPoint1.x, this.fromPoint1.y);
         this.ctx.lineTo(this.fromPoint2.x, this.fromPoint2.y);

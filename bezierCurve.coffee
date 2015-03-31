@@ -177,11 +177,12 @@ class @BezierCurvePoint
 		# Draw line on which this point is moving on
 		if @movable
 
-			
-			lineWidth = 1
+			# Main chart lines will be more visible then movable lines
 			if @deepLevel == 1
 				lineColor = '#666'
 			else
+
+				# Paint other lines with silver/blue each second line, based on which nested level they are.
 				if @deepLevel % 2 == 0
 					lineColor = 'silver'
 				else 
@@ -190,7 +191,7 @@ class @BezierCurvePoint
 
 			# Draw line between 2 dots
 			@ctx.beginPath();
-			@ctx.lineWidth = lineWidth
+			@ctx.lineWidth = 1
 			@ctx.strokeStyle = lineColor
 			@ctx.moveTo(@fromPoint1.x, @fromPoint1.y);
 			@ctx.lineTo(@fromPoint2.x, @fromPoint2.y);	
