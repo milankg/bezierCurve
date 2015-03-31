@@ -5,7 +5,7 @@ class @BezierCustomRun
 		# Get canvas
 		@bezierCanvas = $( '#bezierCanvas' )
 
-		# Create points 
+		# Create some random points 
 		points = []
 		points.push( { x: 10, y: 10 } )
 		points.push( { x: 20, y: 40 } )
@@ -18,7 +18,7 @@ class @BezierCustomRun
 		points.push( { x: 85, y: 70 } )
 		points.push( { x: 100, y: 50 } )
 
-		# Create Bezier curve object and start playing
+		# Create Bezier curve object and play it
 		@curve = new BezierCurve( points, @bezierCanvas, 110, 100 )
 		@curve.play()
 
