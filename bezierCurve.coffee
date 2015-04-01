@@ -20,7 +20,7 @@ class @BezierCurve
 		# -----------------------------------------
 		# Title
 		# -----------------------------------------
-		@titleBezierCurve = "~ Bezier Curve ~"
+		@titleBezierCurve = "~~ Bezier Curve ~~"
 		bezierWidth = @ctx.measureText( @titleBezierCurve ).width
 		@titleBezierCurveLeft = ( @canvasWidth - bezierWidth ) / 2
 		@titleBezierCurveTop = 10

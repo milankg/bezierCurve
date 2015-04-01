@@ -9,7 +9,7 @@
       this.ctx = canvas[0].getContext('2d');
       this.canvasWidth = canvas.width();
       this.canvasHeight = canvas.height();
-      this.titleBezierCurve = "~ Bezier Curve ~";
+      this.titleBezierCurve = "~~ Bezier Curve ~~";
       bezierWidth = this.ctx.measureText(this.titleBezierCurve).width;
       this.titleBezierCurveLeft = (this.canvasWidth - bezierWidth) / 2;
       this.titleBezierCurveTop = 10;

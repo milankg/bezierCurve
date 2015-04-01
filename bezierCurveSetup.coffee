@@ -23,5 +23,4 @@ class @BezierCustomRun
 		@curve.play()
 
 $ ->
-
 	bezier = new BezierCustomRun()
