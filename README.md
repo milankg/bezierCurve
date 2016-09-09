@@ -11,7 +11,7 @@ https://s3.amazonaws.com/beziercurve/index.html
 
 # Team
 
-www.vigormediadesign.com
+www.vigorsolutions.eu
 
 
 
